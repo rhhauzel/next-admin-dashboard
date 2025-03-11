@@ -11,9 +11,11 @@ export const { auth, signIn, signOut} = NextAuth({
             async authorize(credentials){
                 const user = users.find((x) => x.email === credentials.email)
             
+                //console.log(user)
                 if(!user) return null
                 const passwordMatch = await compare(credentials.password as string, user.password)
                 if(passwordMatch){
+                    //console.log("correct")
                     return user
                 }
                 console.log('Invalid credentials')

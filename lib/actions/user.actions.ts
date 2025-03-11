@@ -8,12 +8,12 @@ export async function authenticate(
     formData: FormData
 ){
     try{
-        await signIn('credentails', formData)
+        await signIn('credentials', formData)
     }catch (error){
         if(error instanceof AuthError) {
             switch(error.type){
                 case 'CredentialsSignin':
-                    return 'Invalid credentails.'
+                    return 'Invalid credentials.'
                 default:
                     return 'Something went wrong.'
             }
