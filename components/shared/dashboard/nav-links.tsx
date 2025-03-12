@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation"
 
 const links = [
     { name: 'Home', href: '/dashboard', icon: HomeIcon },
-    { name: 'Invoices', href: '/cashboard/invoices', icon: Files},
-    { name: 'Customers', href: '/cashboard/customers', icon: UsersIcon}
+    { name: 'Invoices', href: '/dashboard/invoices', icon: Files},
+    { name: 'Customers', href: '/dashboard/customers', icon: UsersIcon}
 ]
 
 export default function NavLinks() {
